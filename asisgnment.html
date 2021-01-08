@@ -4,13 +4,53 @@
     <meta charset="utf-8">
     <title>Assignment Rapid Front End 1</title>
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        // function myFunction() {
+        //     var x = document.getElementById("email").innerHTML;
+        //     document.getElementById("demo").innerHTML = "Hello World";
+        // }
+
+        function insertEmail(){
+            var email = document.getElementById('email').value
+            console.log(email);
+            console.log(typeof(email));
+            return checkEmail(email);
+        }
+
+        function validEmail(email){
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
+        function checkEmail(email){
+            if(validEmail(email)){
+                return document.getElementById('demo').innerHTML = "true";
+            }else
+                return document.getElementById('demo').innerHTML = "A valid email is required";
+        }
+
+    </script>
 </head>
+
 <body id="content"\>
+
     <div class="card">
+        
         <h1 id="main-header">Subscribe Now!</h1>
+
         <p class="main-text">Email address</p>
-        <input type="email" class="input-card">
-        <button class="card-button">Subscribe</button>
+
+        <input id="email" class="input-card" type="text">
+
+        <!-- <p id="email"></p> -->
+
+        <p id="demo" class="input-email" ></p>
+
+        <button class="card-button" onclick="insertEmail()"> Subscribe </button>
+
     </div>
+
 </body>
+
 </html>

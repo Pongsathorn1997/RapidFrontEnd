@@ -41,10 +41,29 @@
     color: #000;
 }
 
-.card .input-card{
+.input-card{
     width: 90%;
     margin: 10px 0px 5px 10px ;
     padding: 10px;
     border: 1px solid rgb(211, 211, 211);
     border-radius: 2px;
 }
+.input-card:focus{
+    outline: none; 
+    box-shadow: 0 0 0 3px rgb(102, 160, 248);
+}
+
+/* .input-card:not(:focus){
+    outline: none; 
+    box-shadow: 0 0 0 3px rgb(224, 90, 56);
+    
+} */
+
+.input-email{
+    margin: 0px 0px 0px 10px;
+    color: red;
+}
+/* .input-card:invalid{
+    border-color: red;
+} */
+
