@@ -5,32 +5,7 @@
     <title>Assignment Rapid Front End 1</title>
     <link rel="stylesheet" href="style.css">
 
-    <script>
-        // function myFunction() {
-        //     var x = document.getElementById("email").innerHTML;
-        //     document.getElementById("demo").innerHTML = "Hello World";
-        // }
-
-        function insertEmail(){
-            var email = document.getElementById('email').value
-            console.log(email);
-            console.log(typeof(email));
-            return checkEmail(email);
-        }
-
-        function validEmail(email){
-            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return re.test(email);
-        }
-
-        function checkEmail(email){
-            if(validEmail(email)){
-                return document.getElementById('demo').innerHTML = "true";
-            }else
-                return document.getElementById('demo').innerHTML = "A valid email is required";
-        }
-
-    </script>
+    <script src="script.js"></script>
 
     <!-- only left with the warning and how to make it show success -->
 </head>
@@ -38,6 +13,8 @@
 <body id="content"\>
 
     <div class="card">
+
+        <div id="c2" class = "card2">
         
         <h1 id="main-header">Subscribe Now!</h1>
 
@@ -45,13 +22,25 @@
 
         <input id="email" class="input-card" type="text">
 
-        <!-- <p id="email"></p> -->
+        <p id="demo" class="input-email"></p>
 
-        <p id="demo" class="input-email" ></p>
+        <button id="btn" class="card-button" onclick="insertEmail()"> Subscribe </button>
 
-        <button class="card-button" onclick="insertEmail()"> Subscribe </button>
+        </div>
+
+        <!-- the modal -->
+
+        <div id="myModal" class="modal">
+
+        <h1>Thank you</h1>
+
+        <p>Your subscription was a success!</p>
+
+        </div>
 
     </div>
+
+    
 
 </body>
 
