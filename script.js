@@ -19,7 +19,9 @@ function checkEmail(email){
     if(validEmail(email)){
         document.getElementById('c2').style.display = "none"
         return document.getElementById('myModal').style.display = "block"
-    }else
+    }else{
+        document.getElementById('email').style.boxShadow = "0 0 0 3px rgb(255, 0, 0)"
         return document.getElementById('demo').innerHTML = "A valid email is required";
+    }
 }
 
